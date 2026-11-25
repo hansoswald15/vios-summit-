@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="VIOS Summit 2026 — Vijana International Opportunities Summit. Free registration. Sunday 29 November 2026 at University of Dar es Salaam.">
+<meta name="theme-color" content="#071F55">
+<title>VIOS Summit 2026 | Official Registration</title>
+<style>
+  :root {
+    --navy: #071F55;
+    --purple: #7500A8;
+    --blue: #087CE5;
+    --white: #FFFFFF;
+    --light: #F5F6FA;
+    --gray: #6B7280;
+    --dark: #111827;
+    --success: #059669;
+    --error: #DC2626;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(7, 31, 85, 0.08);
+    --shadow-lg: 0 20px 50px rgba(7, 31, 85, 0.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  button, input, select, textarea { font-family: inherit; }
+
+  .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ========== NAV ========== */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(7, 31, 85, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: box-shadow 0.3s;
+  }
+  .nav.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.25); }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+  }
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(8, 124, 229, 0.35);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(8, 124, 229, 0.45);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.4);
+  }
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--white);
+  }
+  .btn-white {
+    background: var(--white);
+    color: var(--navy);
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-lg { padding: 16px 32px; font-size: 1.05rem; }
+  .btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+
+  .nav-cta { display: none; }
+  @media (min-width: 900px) {
+    .nav-cta { display: inline-flex; }
+    .menu-toggle { display: none !important; }
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    padding: 20px;
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: var(--white);
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+  .mobile-menu a:hover { background: rgba(255,255,255,0.08); }
+  .mobile-menu .btn { margin-top: 12px; width: 100%; }
+
+  /* ========== HERO ========== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(160deg, #071F55 0%, #0a2a6e 40%, #1a0a3a 100%);
+    color: var(--white);
+    padding: 120px 0 80px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(8,124,229,0.25) 0%, transparent 45%),
+      radial-gradient(circle at 80% 70%, rgba(117,0,168,0.2) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: 48px;
+    position: relative;
+    z-index: 1;
+  }
+  @media (min-width: 960px) {
+    .hero-grid {
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+    }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .hero-badge span {
+    width: 8px; height: 8px;
+    background: #34D399;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+  .hero-sub {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 16px;
+  }
+  .hero-slogan {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #A5D8FF;
+    margin-bottom: 24px;
+  }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 520px;
+    margin-bottom: 32px;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 28px;
+    margin-bottom: 36px;
+    font-size: 0.95rem;
+  }
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.9);
+  }
+  .hero-meta-item svg { flex-shrink: 0; opacity: 0.9; }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .countdown {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 28px 24px;
+    backdrop-filter: blur(8px);
+  }
+  .countdown-title {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 20px;
+  }
+  .countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .countdown-item {
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+    padding: 16px 8px;
+  }
+  .countdown-num {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--white);
+  }
+  .countdown-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.65);
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* ========== SECTIONS ========== */
+  section { padding: 80px 0; }
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+  }
+  .section-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+  .section-header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+  .section-header p {
+    color: var(--gray);
+    font-size: 1.05rem;
+  }
+
+  /* ABOUT */
+  .about {
+    background: var(--light);
+  }
+  .about-content {
+    display: grid;
+    gap: 40px;
+  }
+  @media (min-width: 800px) {
+    .about-content {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+  .about-text h3 {
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .about-text p {
+    color: var(--gray);
+    margin-bottom: 16px;
+  }
+  .about-highlights {
+    display: grid;
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .about-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--white);
+    padding: 14px 16px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  .about-highlight svg {
+    flex-shrink: 0;
+    color: var(--blue);
+    margin-top: 2px;
+  }
+  .about-card {
+    background: linear-gradient(145deg, var(--navy), #0d2d70);
+    color: var(--white);
+    border-radius: 24px;
+    padding: 40px 32px;
+    text-align: center;
+  }
+  .about-card .big {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .about-card .label {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 24px;
+  }
+  .about-card .free-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  /* ACTIVITIES */
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .activity-card {
+    background: var(--white);
+    border: 1px solid #E5E7EB;
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    transition: all 0.25s ease;
+  }
+  .activity-card:hover {
+    border-color: transparent;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  .activity-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(8,124,229,0.12), rgba(117,0,168,0.12));
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    color: var(--blue);
+  }
+  .activity-card h3 {
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .activity-card p {
+    font-size: 0.92rem;
+    color: var(--gray);
+  }
+
+  /* BENEFITS */
+  .benefits {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .benefits .section-label { color: #A5D8FF; }
+  .benefits .section-header h2 { color: var(--white); }
+  .benefits .section-header p { color: rgba(255,255,255,0.75); }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .benefit-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    transition: background 0.2s;
+  }
+  .benefit-card:hover { background: rgba(255,255,255,0.12); }
+  .benefit-card.featured {
+    background: linear-gradient(135deg, rgba(8,124,229,0.25), rgba(117,0,168,0.25));
+    border-color: rgba(255,255,255,0.25);
+  }
+  .benefit-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+    display: grid;
+    place-items: center;
+    margin-bottom: 16px;
+  }
+  .benefit-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+  .benefit-card p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+
+  /* EVENT INFO */
+  .event-info-panel {
+    background: var(--light);
+    border-radius: 24px;
+    padding: 40px;
+    display: grid;
+    gap: 32px;
+  }
+  @media (min-width: 700px) {
+    .event-info-panel {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .info-list {
+    display: grid;
+    gap: 20px;
+  }
+  .info-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .info-item .icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    display: grid;
+    place-items: center;
+    color: white;
+    flex-shrink: 0;
+  }
+  .info-item h4 {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+  }
+  .info-item p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .map-placeholder {
+    background: #E5E7EB;
+    border-radius: 16px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--gray);
+    text-align: center;
+    padding: 24px;
+  }
+  .map-placeholder a {
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  /* REGISTRATION */
+  .register {
+    background: linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
+  }
+  .form-card {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  .form-header {
+    background: linear-gradient(135deg, var(--navy), #0d2d70);
+    color: white;
+    padding: 28px 32px;
+    text-align: center;
+  }
+  .form-header h3 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+  .form-header p {
+    opacity: 0.85;
+    font-size: 0.95rem;
+  }
+
+  .form-body {
+    padding: 32px;
+  }
+
+  .form-group {
+    margin-bottom: 22px;
+  }
+  .form-row {
+    display: grid;
+    gap: 18px;
+  }
+  @media (min-width: 560px) {
+    .form-row.two { grid-template-columns: 1fr 1fr; }
+  }
+
+  label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 7px;
+  }
+  label .req { color: var(--error); }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #D1D5DB;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: var(--dark);
+    background: var(--white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(8, 124, 229, 0.15);
+  }
+  input.error, select.error {
+    border-color: var(--error);
+  }
+  .error-msg {
+    color: var(--error);
+    font-size: 0.82rem;
+    margin-top: 5px;
+    display: none;
+  }
+  .error-msg.show { display: block; }
+
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  .checkbox-item input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--blue);
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 24px;
+  }
+  .radio-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  .radio-item input { accent-color: var(--blue); }
+
+  .consent-box {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 8px;
+  }
+  .consent-box label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .consent-box input { margin-top: 3px; }
+
+  .privacy-note {
+    font-size: 0.82rem;
+    color: var(--gray);
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  .form-actions {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .form-actions .btn { width: 100%; }
+
+  /* REVIEW & CONFIRMATION */
+  .review-card, .confirm-card {
+    display: none;
+    padding: 32px;
+  }
+  .review-card h3, .confirm-card h3 {
+    font-size: 1.35rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .review-card > p, .confirm-card > p {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 28px;
+  }
+
+  .review-list {
+    background: var(--light);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+  .review-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 0.95rem;
+  }
+  .review-row:last-child { border-bottom: none; }
+  .review-row .label { color: var(--gray); font-weight: 500; }
+  .review-row .value { font-weight: 600; color: var(--navy); text-align: right; }
+
+  .confirm-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+  }
+  .confirm-note {
+    background: #FEF3C7;
+    border: 1px solid #F59E0B;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 0.92rem;
+    color: #92400E;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .confirm-details {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.8);
+    padding: 60px 0 30px;
+  }
+  .footer-grid {
+    display: grid;
+    gap: 36px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 700px) {
+    .footer-grid {
+      grid-template-columns: 1.4fr 1fr 1fr;
+    }
+  }
+  .footer-brand h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+  .footer-brand p {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  .footer-col h4 {
+    color: white;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+  .footer-col ul {
+    list-style: none;
+  }
+  .footer-col li { margin-bottom: 8px; }
+  .footer-col a {
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: white; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+
+  /* UTILITIES */
+  .hidden { display: none !important; }
+  .text-center { text-align: center; }
+  .mt-2 { margin-top: 8px; }
+  .mt-4 { margin-top: 16px; }
+
+  /* Loading spinner */
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 2.5px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    section { padding: 56px 0; }
+    .form-body, .review-card, .confirm-card { padding: 24px 20px; }
+    .hero { padding: 100px 0 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">
+      <div class="logo-mark">VS</div>
+      <span>VIOS Summit 2026</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Summit</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#register" class="btn btn-primary nav-cta">Register Now</a></li>
+    </ul>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About Summit</a>
+    <a href="#activities">Activities</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#event-info">Event Info</a>
+    <a href="#register" class="btn btn-primary">Register Now</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span></span> Free Registration • Limited Seats
+      </div>
+      <h1>VIOS SUMMIT 2026</h1>
+      <p class="hero-sub">Vijana International Opportunities Summit</p>
+      <p class="hero-slogan">DREAM • LEARN • CONNECT • GROW</p>
+      <p class="hero-desc">
+        Join young people, innovators, entrepreneurs, artists, and opportunity seekers for an exciting experience filled with learning, networking, entertainment, and international opportunities.
+      </p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Sunday, 29 November 2026
+        </div>
+        <div class="hero-meta-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          08:00 AM – 02:00 PM
+        </div>
+        <div class="hero-meta-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          University of Dar es Salaam, New Library Hall
+        </div>
+        <div class="hero-meta-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          FREE Registration
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#register" class="btn btn-primary btn-lg">Register Now</a>
+        <a href="#about" class="btn btn-outline btn-lg">Explore the Summit</a>
+      </div>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div class="countdown-title">Event Starts In</div>
+      <div class="countdown-grid">
+        <div class="countdown-item">
+          <div class="countdown-num" id="cd-days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-num" id="cd-hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-num" id="cd-mins">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-num" id="cd-secs">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">About the Summit</span>
+      <h2>A Platform for Young Opportunity Seekers</h2>
+      <p>Bringing young people together to discover opportunities, exchange ideas, and grow.</p>
+    </div>
+
+    <div class="about-content">
+      <div class="about-text">
+        <h3>What is VIOS Summit 2026?</h3>
+        <p>
+          The Vijana International Opportunities Summit (VIOS) is a dynamic gathering designed for young people who are ready to dream bigger, learn faster, and connect with opportunities that shape their future.
+        </p>
+        <p>
+          Whether you are a student, innovator, aspiring entrepreneur, artist, or someone seeking international study and work opportunities, VIOS Summit creates a space to explore, network, and take the next step in your journey.
+        </p>
+
+        <div class="about-highlights">
+          <div class="about-highlight">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            <div>
+              <strong>Education & Careers</strong><br>
+              <span style="font-size:0.9rem;color:var(--gray)">Abroad jobs, study opportunities and career pathways</span>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            <div>
+              <strong>Innovation & Entrepreneurship</strong><br>
+              <span style="font-size:0.9rem;color:var(--gray)">Meet startups, innovators and like-minded peers</span>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            <div>
+              <strong>Networking & Growth</strong><br>
+              <span style="font-size:0.9rem;color:var(--gray)">Build meaningful connections that last beyond the day</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <div class="big">FREE</div>
+        <div class="label">Complete Registration</div>
+        <p style="margin-bottom:20px;opacity:0.9;font-size:0.95rem">
+          No registration fees. No hidden costs.<br>
+          Just show up ready to grow.
+        </p>
+        <div class="free-badge">100% Free Entry</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ACTIVITIES ========== -->
+<section id="activities">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What to Expect</span>
+      <h2>Summit Activities</h2>
+      <p>A full day of learning, entertainment, competition and connection.</p>
+    </div>
+
+    <div class="activities-grid">
+      <div class="activity-card">
+        <div class="activity-icon">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Jogging</h3>
+        <p>Start the day with energy. Join fellow participants for a morning run and wellness activity.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h3>Brass Band</h3>
+        <p>Live brass band performances that set an energetic and celebratory atmosphere throughout the event.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3>Artists & Entertainment</h3>
+        <p>Experience talented artists and entertainers who will keep the energy high and the vibes positive.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M14 12h4"/></svg>
+        </div>
+        <h3>Games</h3>
+        <p>Fun interactive games and competitions designed to break the ice and build teamwork.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Panel Discussions</h3>
+        <p>Thought-provoking conversations on opportunities, careers, innovation and youth development.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Startups & Innovators</h3>
+        <p>Meet young founders and innovators. Discover ideas and projects shaping the future.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3>Abroad Jobs & Study</h3>
+        <p>Explore international study programmes, scholarships and job opportunities beyond Tanzania.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3>Volunteering</h3>
+        <p>Learn about meaningful volunteering opportunities and how you can contribute to your community.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Networking</h3>
+        <p>Connect with peers, professionals and opportunity providers in a relaxed and open environment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BENEFITS ========== -->
+<section class="benefits" id="benefits">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Why Attend</span>
+      <h2>Participant Benefits</h2>
+      <p>We remove the barriers so you can focus on growing.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card featured">
+        <div class="benefit-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>
+        </div>
+        <h3>Free Food & Refreshments</h3>
+        <p>Participants will have access to food and refreshments throughout the event. No need to worry about meals.</p>
+      </div>
+
+      <div class="benefit-card featured">
+        <div class="benefit-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v1"/><path d="M14 15l6-6 6 6"/><path d="M11 9h8v11a2 2 0 01-2 2H5a2 2 0 01-2-2v-5"/></svg>
+        </div>
+        <h3>Free Transportation</h3>
+        <p>Free transport will be provided to take participants to the University and return them after the event.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Networking Opportunities</h3>
+        <p>Connect with other young people, professionals, innovators and opportunity seekers.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <h3>Learning & Exposure</h3>
+        <p>Discover opportunities in education, employment, entrepreneurship and international development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENT INFO ========== -->
+<section id="event-info">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Practical Details</span>
+      <h2>Event Information</h2>
+    </div>
+
+    <div class="event-info-panel">
+      <div class="info-list">
+        <div class="info-item">
+          <div class="icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <div>
+            <h4>Date</h4>
+            <p>Sunday, 29 November 2026</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <h4>Time</h4>
+            <p>08:00 AM – 02:00 PM</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Venue</h4>
+            <p>University of Dar es Salaam<br>New Library Hall</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div>
+            <h4>Registration</h4>
+            <p>Completely FREE</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-placeholder">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <strong>University of Dar es Salaam</strong><br>
+          New Library Hall
+        </div>
+        <a href="https://maps.google.com/?q=University+of+Dar+es+Salaam+Library" target="_blank" rel="noopener">
+          Open in Google Maps →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REGISTRATION ========== -->
+<section class="register" id="register">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Join Us</span>
+      <h2>Register for VIOS Summit 2026</h2>
+      <p>Complete the form below. Registration takes less than 2 minutes and is completely free.</p>
+    </div>
+
+    <div class="form-card">
+      <!-- FORM VIEW -->
+      <div id="formView">
+        <div class="form-header">
+          <h3>Participant Registration</h3>
+          <p>All fields marked with * are required</p>
+        </div>
+
+        <form class="form-body" id="regForm" novalidate>
+          <div class="form-row two">
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <input type="text" id="fullName" name="fullName" placeholder="e.g. Amina Juma" required autocomplete="name">
+              <div class="error-msg" id="err-fullName">Please enter your full name</div>
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                <option value="">Prefer not to say</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="07XX XXX XXX" required autocomplete="tel">
+              <div class="error-msg" id="err-phone">Enter a valid Tanzanian phone number</div>
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp Number <span class="req">*</span></label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="07XX XXX XXX" required>
+              <div class="mt-2">
+                <label class="checkbox-item" style="font-weight:500">
+                  <input type="checkbox" id="sameAsPhone"> Same as phone number
+                </label>
+              </div>
+              <div class="error-msg" id="err-whatsapp">Enter a valid WhatsApp number</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+            <div class="error-msg" id="err-email">Enter a valid email address</div>
+          </div>
+
+          <div class="form-group">
+            <label for="institution">Institution / University / Organisation <span class="req">*</span></label>
+            <input type="text" id="institution" name="institution" placeholder="e.g. University of Dar es Salaam" required>
+            <div class="error-msg" id="err-institution">Please enter your institution</div>
+          </div>
+
+          <div class="form-group">
+            <label for="course">Course / Field of Study / Profession</label>
+            <input type="text" id="course" name="course" placeholder="e.g. Computer Science, Entrepreneur, Artist">
+          </div>
+
+          <div class="form-row two">
+            <div class="form-group">
+              <label for="ageGroup">Age Group <span class="req">*</span></label>
+              <select id="ageGroup" name="ageGroup" required>
+                <option value="">Select age group</option>
+                <option value="Under 18">Under 18</option>
+                <option value="18-22">18 – 22</option>
+                <option value="23-27">23 – 27</option>
+                <option value="28-35">28 – 35</option>
+                <option value="Over 35">Over 35</option>
+              </select>
+              <div class="error-msg" id="err-ageGroup">Please select your age group</div>
+            </div>
+            <div class="form-group">
+              <label for="region">Region / Location <span class="req">*</span></label>
+              <input type="text" id="region" name="region" placeholder="e.g. Dar es Salaam, Arusha" required>
+              <div class="error-msg" id="err-region">Please enter your region or location</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Are you interested in free transportation? <span class="req">*</span></label>
+            <div class="radio-group">
+              <label class="radio-item">
+                <input type="radio" name="transport" value="Yes" required> Yes
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="transport" value="No"> No
+              </label>
+            </div>
+            <div class="error-msg" id="err-transport">Please select an option</div>
+          </div>
+
+          <div class="form-group">
+            <label>Which summit activities interest you?</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" name="activities" value="Jogging"> Jogging</label>
+              <label class="checkbox-item"><input type="checkbox" name="activities" value="Brass Band"> Brass Band</label>
+              <label class="checkbox-item"><input type="checkbox" name="activities" value="Artists & Entertainment"> Artists & Entertainment</label>
+              <label class="checkbox-item"><input type="checkbox" name="activities" value="Games"> Games</label>
+              <label class="checkbox-item"><input type="checkbox" name="activities" value="Panel Discussions"> Panel Discussions</label>
+              <label class="checkbox-item"><input type="checkbox" name="activities" value="Startups & Innovators"> Startups & Innovators</label>
+              <label class="checkbox-item"><input type="checkbox" name="activities" value="Abroad Jobs & Study"> Abroad Jobs & Study</label>
+              <label class="checkbox-item"><input type="checkbox" name="activities" value="Volunteering"> Volunteering</label>
+              <label class="checkbox-item"><input type="checkbox" name="activities" value="Networking"> Networking</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="source">How did you hear about VIOS Summit 2026?</label>
+            <select id="source" name="source">
+              <option value="">Select an option</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Friends">Friends / Word of mouth</option>
+              <option value="University">University / Campus</option>
+              <option value="Posters">Posters / Flyers</option>
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="consent-box">
+            <label>
+              <input type="checkbox" id="consent" name="consent" required>
+              <span>I confirm that the information provided is accurate and I agree to be contacted regarding VIOS Summit 2026. <span class="req">*</span></span>
+            </label>
+            <div class="error-msg" id="err-consent">You must agree to continue</div>
+          </div>
+
+          <p class="privacy-note">
+            Your information will only be used for VIOS Summit 2026 registration, communication and event logistics. We do not sell or share your data with third parties for marketing purposes.
+          </p>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+              Review Registration
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- REVIEW VIEW -->
+      <div class="review-card" id="reviewView">
+        <h3>Review Your Registration</h3>
+        <p>Please confirm that all details are correct before continuing.</p>
+
+        <div class="review-list" id="reviewList"></div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary btn-lg" id="confirmWhatsAppBtn">
+            Complete Registration via WhatsApp
+          </button>
+          <button type="button" class="btn" id="editBtn" style="background:#E5E7EB;color:var(--navy)">
+            Edit Information
+          </button>
+        </div>
+      </div>
+
+      <!-- CONFIRMATION VIEW -->
+      <div class="confirm-card" id="confirmView">
+        <div class="confirm-icon">
+          <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        </div>
+        <h3>Thank you for choosing VIOS Summit 2026!</h3>
+        <p>Your registration details have been prepared.</p>
+
+        <div class="confirm-note">
+          <strong>Important:</strong> Please press <strong>SEND</strong> in WhatsApp to complete your registration. Opening WhatsApp does not automatically submit your details.
+        </div>
+
+        <div class="confirm-details">
+          <strong>Sunday, 29 November 2026</strong><br>
+          08:00 AM – 02:00 PM<br>
+          University of Dar es Salaam, New Library Hall<br>
+          <span style="color:var(--success);font-weight:700">Registration is FREE</span>
+        </div>
+
+        <div class="form-actions">
+          <a href="#home" class="btn btn-primary" id="backHomeBtn">Back to Website</a>
+          <button type="button" class="btn" id="openWhatsAppAgain" style="background:#25D366;color:white">
+            Open WhatsApp Again
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>VIOS Summit 2026</h3>
+        <p>Vijana International Opportunities Summit</p>
+        <p style="font-size:0.88rem">
+          Sunday, 29 November 2026<br>
+          University of Dar es Salaam, New Library Hall
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Summit</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#register">Register Now</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://telsco.co.tz" target="_blank" rel="noopener">telsco.co.tz</a></li>
+          <li><a href="mailto:telscotanzanite@gmail.com">telscotanzanite@gmail.com</a></li>
+          <li><a href="tel:+255749749000">0749 749 000</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 VIOS Summit. All rights reserved.</div>
+      <div>
+        <a href="#" style="margin-right:16px">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   CONFIG — CHANGE THESE VALUES BEFORE GOING LIVE
+   ============================================================ */
+const CONFIG = {
+  // Official WhatsApp number that receives registrations (international format, no + or spaces)
+  whatsappNumber: "255749749000",   // ← CHANGE THIS to the real registration number
+
+  // Event date & time for countdown (EAT = UTC+3)
+  eventDate: new Date("2026-11-29T08:00:00+03:00")
+};
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+const nav = document.getElementById("nav");
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", window.scrollY > 20);
+});
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("open");
+  mobileMenu.classList.toggle("open");
+});
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    menuToggle.classList.remove("open");
+    mobileMenu.classList.remove("open");
+  });
+});
+
+/* ============================================================
+   COUNTDOWN TIMER
+   ============================================================ */
+function updateCountdown() {
+  const now = new Date();
+  const diff = CONFIG.eventDate - now;
+
+  if (diff <= 0) {
+    document.getElementById("cd-days").textContent = "00";
+    document.getElementById("cd-hours").textContent = "00";
+    document.getElementById("cd-mins").textContent = "00";
+    document.getElementById("cd-secs").textContent = "00";
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
+  document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
+  document.getElementById("cd-mins").textContent = String(mins).padStart(2, "0");
+  document.getElementById("cd-secs").textContent = String(secs).padStart(2, "0");
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* ============================================================
+   FORM LOGIC
+   ============================================================ */
+const form = document.getElementById("regForm");
+const formView = document.getElementById("formView");
+const reviewView = document.getElementById("reviewView");
+const confirmView = document.getElementById("confirmView");
+const reviewList = document.getElementById("reviewList");
+
+let formData = {};
+let lastWhatsAppUrl = "";
+
+// Same as phone checkbox
+document.getElementById("sameAsPhone").addEventListener("change", function () {
+  const phone = document.getElementById("phone");
+  const whatsapp = document.getElementById("whatsapp");
+  if (this.checked) {
+    whatsapp.value = phone.value;
+    whatsapp.readOnly = true;
+  } else {
+    whatsapp.readOnly = false;
+  }
+});
+document.getElementById("phone").addEventListener("input", function () {
+  if (document.getElementById("sameAsPhone").checked) {
+    document.getElementById("whatsapp").value = this.value;
+  }
+});
+
+// Phone validation (Tanzanian format)
+function isValidPhone(num) {
+  const cleaned = num.replace(/[\s\-()]/g, "");
+  // Accepts 07XXXXXXXX, 06XXXXXXXX, +2557XXXXXXXX, 2557XXXXXXXX
+  return /^(?:\+?255|0)?[67]\d{8}$/.test(cleaned);
+}
+
+function showError(id, show) {
+  const el = document.getElementById("err-" + id);
+  const input = document.getElementById(id) || document.querySelector(`[name="${id}"]`);
+  if (el) el.classList.toggle("show", show);
+  if (input && input.tagName !== "INPUT" || (input && input.type !== "radio" && input.type !== "checkbox")) {
+    if (input) input.classList.toggle("error", show);
+  }
+}
+
+function validateForm() {
+  let valid = true;
+  const data = {};
+
+  // Full Name
+  data.fullName = document.getElementById("fullName").value.trim();
+  if (!data.fullName || data.fullName.length < 2) {
+    showError("fullName", true); valid = false;
+  } else showError("fullName", false);
+
+  // Gender (optional)
+  data.gender = document.getElementById("gender").value || "Not specified";
+
+  // Phone
+  data.phone = document.getElementById("phone").value.trim();
+  if (!isValidPhone(data.phone)) {
+    showError("phone", true); valid = false;
+  } else showError("phone", false);
+
+  // WhatsApp
+  data.whatsapp = document.getElementById("whatsapp").value.trim();
+  if (!isValidPhone(data.whatsapp)) {
+    showError("whatsapp", true); valid = false;
+  } else showError("whatsapp", false);
+
+  // Email (optional but validate format if provided)
+  data.email = document.getElementById("email").value.trim();
+  if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    showError("email", true); valid = false;
+  } else showError("email", false);
+  if (!data.email) data.email = "Not provided";
+
+  // Institution
+  data.institution = document.getElementById("institution").value.trim();
+  if (!data.institution) {
+    showError("institution", true); valid = false;
+  } else showError("institution", false);
+
+  // Course (optional)
+  data.course = document.getElementById("course").value.trim() || "Not provided";
+
+  // Age Group
+  data.ageGroup = document.getElementById("ageGroup").value;
+  if (!data.ageGroup) {
+    showError("ageGroup", true); valid = false;
+  } else showError("ageGroup", false);
+
+  // Region
+  data.region = document.getElementById("region").value.trim();
+  if (!data.region) {
+    showError("region", true); valid = false;
+  } else showError("region", false);
+
+  // Transport
+  const transport = document.querySelector('input[name="transport"]:checked');
+  data.transport = transport ? transport.value : "";
+  if (!data.transport) {
+    showError("transport", true); valid = false;
+  } else showError("transport", false);
+
+  // Activities
+  const activities = [...document.querySelectorAll('input[name="activities"]:checked')].map(c => c.value);
+  data.activities = activities.length ? activities.join(", ") : "None selected";
+
+  // Source
+  data.source = document.getElementById("source").value || "Not specified";
+
+  // Consent
+  data.consent = document.getElementById("consent").checked;
+  if (!data.consent) {
+    showError("consent", true); valid = false;
+  } else showError("consent", false);
+
+  return valid ? data : null;
+}
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const data = validateForm();
+  if (!data) {
+    // Scroll to first error
+    const firstErr = document.querySelector(".error-msg.show");
+    if (firstErr) firstErr.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  formData = data;
+  renderReview(data);
+  formView.style.display = "none";
+  reviewView.style.display = "block";
+  reviewView.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+function renderReview(data) {
+  const rows = [
+    ["Full Name", data.fullName],
+    ["Gender", data.gender],
+    ["Phone Number", data.phone],
+    ["WhatsApp Number", data.whatsapp],
+    ["Email", data.email],
+    ["Institution", data.institution],
+    ["Course / Profession", data.course],
+    ["Age Group", data.ageGroup],
+    ["Location", data.region],
+    ["Free Transportation", data.transport],
+    ["Activities of Interest", data.activities],
+    ["How I heard about VIOS", data.source]
+  ];
+
+  reviewList.innerHTML = rows.map(([label, value]) => `
+    <div class="review-row">
+      <span class="label">${label}</span>
+      <span class="value">${value}</span>
+    </div>
+  `).join("");
+}
+
+document.getElementById("editBtn").addEventListener("click", () => {
+  reviewView.style.display = "none";
+  formView.style.display = "block";
+  formView.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+/* ============================================================
+   WHATSAPP INTEGRATION
+   ============================================================ */
+function buildWhatsAppMessage(data) {
+  return `VIOS SUMMIT 2026 — NEW REGISTRATION
+
+Hello VIOS Summit Team,
+
+I would like to register for VIOS Summit 2026.
+
+PARTICIPANT INFORMATION
+Full Name: ${data.fullName}
+Gender: ${data.gender}
+Phone Number: ${data.phone}
+WhatsApp Number: ${data.whatsapp}
+Email: ${data.email}
+Institution: ${data.institution}
+Course/Profession: ${data.course}
+Age Group: ${data.ageGroup}
+Location: ${data.region}
+
+TRANSPORTATION
+Interested in free transportation: ${data.transport}
+
+ACTIVITIES OF INTEREST
+${data.activities}
+
+HOW I HEARD ABOUT VIOS
+${data.source}
+
+I confirm that the information provided is accurate.
+I look forward to attending VIOS Summit 2026.
+
+Thank you.`;
+}
+
+function openWhatsApp(data) {
+  const message = buildWhatsAppMessage(data);
+  const encoded = encodeURIComponent(message);
+  const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encoded}`;
+  lastWhatsAppUrl = url;
+
+  // Open WhatsApp
+  window.open(url, "_blank");
+
+  // Show confirmation screen
+  reviewView.style.display = "none";
+  confirmView.style.display = "block";
+  confirmView.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.getElementById("confirmWhatsAppBtn").addEventListener("click", () => {
+  const btn = document.getElementById("confirmWhatsAppBtn");
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Opening WhatsApp...';
+
+  setTimeout(() => {
+    openWhatsApp(formData);
+    btn.disabled = false;
+    btn.innerHTML = "Complete Registration via WhatsApp";
+  }, 600);
+});
+
+document.getElementById("openWhatsAppAgain").addEventListener("click", () => {
+  if (lastWhatsAppUrl) window.open(lastWhatsAppUrl, "_blank");
+});
+
+document.getElementById("backHomeBtn").addEventListener("click", (e) => {
+  e.preventDefault();
+  // Reset form for potential new registration
+  form.reset();
+  document.getElementById("whatsapp").readOnly = false;
+  formData = {};
+  confirmView.style.display = "none";
+  formView.style.display = "block";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+</body>
+</html>
